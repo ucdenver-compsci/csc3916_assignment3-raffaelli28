@@ -86,6 +86,36 @@ router.post('/signin', function (req, res) {
     })
 });
 
+router.route('movies')
+    .delete(authController.isAuthenticated, (req, res) => {
+        console.log (req.body);
+        res = res.status(200);
+        if (req.get('Content-Type')) {
+            res = res.type(req.get('Content-type'));
+        }
+
+        var o = getJSONObjectForMovieRequirement(req);
+        o.status = 200;
+        o.message = "Movie Deleted";
+        res.json(o);
+    }
+)
+
+    .put(authJwtController.isAuthenticated, (req, res) => {
+        console.log(req.body);
+        res = res.status(200);
+        if (req.get('Content-Type')) {
+            res = res.type(req.get('Content-Type'));
+        }
+        var o = getJSONObjectForMovieRequirement(req);
+        o.status = 200;
+        o.message = "movie updated";
+        res.json(o);
+    }
+)
+    .all((req, res) =>{
+       res.status(405).send({message: 'HTTP method not supported.'}); 
+    });
 app.use('/', router);
 app.listen(process.env.PORT || 8080);
 module.exports = app; // for testing only
