@@ -1,0 +1,3 @@
+# I was having issues getting a response back from the server when trying to sign up through the postman request. Also, the react has stopped working after I sent 1 request through postman and I am not sure why that has happened. I was told by the instructor that we may have this assignment regraded up until next Saturday.
+
+Please find the run in postman link: [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://app.getpostman.com/run-collection/32464719-09edc202-44bf-4cf3-9fbd-3d89747a2982?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D32464719-09edc202-44bf-4cf3-9fbd-3d89747a2982%26entityType%3Dcollection%26workspaceId%3D18bd4570-2239-401b-8c0d-06d6ab0b384f)
