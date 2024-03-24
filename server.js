@@ -86,7 +86,7 @@ router.post('/signin', function (req, res) {
     })
 });
 
-router.route('movies')
+router.route('Movies')
     .delete(authController.isAuthenticated, (req, res) => {
         console.log (req.body);
         res = res.status(200);
